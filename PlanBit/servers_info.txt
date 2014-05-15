@@ -1,0 +1,19 @@
+
+IP Address: 95.85.60.110
+Username: root
+Password: vlksbogwmmnq
+
+normal username:
+user: planbit
+pass: pohirf9e3
+
+The DB is configured with the schema. DB details:
+DB: planbit
+username: root
+pass: 654gf3d22s
+
+
+
+IP Address: 190.97.163.103
+User Name: root
+Password: d56rt73nw

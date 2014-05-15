@@ -1,0 +1,2 @@
+module GpuMinersHelper
+end

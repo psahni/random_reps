@@ -1,0 +1,31 @@
+<h1>Listing cpu_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Processor</th>
+      <th>Core amount</th>
+      <th>Cpu conf</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpu_types.each do |cpu_type| %>
+      <tr>
+        <td><%= cpu_type.processor %></td>
+        <td><%= cpu_type.core_amount %></td>
+        <td><%= cpu_type.cpu_conf_id %></td>
+        <td><%= link_to 'Show', cpu_type %></td>
+        <td><%= link_to 'Edit', edit_cpu_type_path(cpu_type) %></td>
+        <td><%= link_to 'Destroy', cpu_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpu type', new_cpu_type_path %>

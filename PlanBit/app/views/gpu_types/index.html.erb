@@ -1,0 +1,31 @@
+<h1>Listing gpu_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Core amount</th>
+      <th>Gpu conf</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gpu_types.each do |gpu_type| %>
+      <tr>
+        <td><%= gpu_type.name %></td>
+        <td><%= gpu_type.core_amount %></td>
+        <td><%= gpu_type.gpu_conf_id %></td>
+        <td><%= link_to 'Show', gpu_type %></td>
+        <td><%= link_to 'Edit', edit_gpu_type_path(gpu_type) %></td>
+        <td><%= link_to 'Destroy', gpu_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gpu type', new_gpu_type_path %>

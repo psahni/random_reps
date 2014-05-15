@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pc cpu type:</strong>
+  <%= @cpu_miner.pc_cpu_type_id %>
+</p>
+
+<p>
+  <strong>Pool:</strong>
+  <%= @cpu_miner.pool_id %>
+</p>
+
+<p>
+  <strong>Start datetime:</strong>
+  <%= @cpu_miner.start_datetime %>
+</p>
+
+<p>
+  <strong>End datetime:</strong>
+  <%= @cpu_miner.end_datetime %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @cpu_miner.total_time %>
+</p>
+
+<p>
+  <strong>Shares:</strong>
+  <%= @cpu_miner.shares %>
+</p>
+
+<p>
+  <strong>Log:</strong>
+  <%= @cpu_miner.log %>
+</p>
+
+<p>
+  <strong>Update interval mins:</strong>
+  <%= @cpu_miner.update_interval_mins %>
+</p>
+
+<%= link_to 'Edit', edit_cpu_miner_path(@cpu_miner) %> |
+<%= link_to 'Back', cpu_miners_path %>

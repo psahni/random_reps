@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @pool_type.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pool_type.name %>
+</p>
+
+<p>
+  <strong>Algo:</strong>
+  <%= @pool_type.algo %>
+</p>
+
+<%= link_to 'Edit', edit_pool_type_path(@pool_type) %> |
+<%= link_to 'Back', pool_types_path %>

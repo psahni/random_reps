@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @gpu_conf.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gpu_conf.name %>
+</p>
+
+<p>
+  <strong>Max temp:</strong>
+  <%= @gpu_conf.max_temp %>
+</p>
+
+<p>
+  <strong>Max cpu:</strong>
+  <%= @gpu_conf.max_cpu %>
+</p>
+
+<p>
+  <strong>Run only inactive:</strong>
+  <%= @gpu_conf.run_only_inactive %>
+</p>
+
+<%= link_to 'Edit', edit_gpu_conf_path(@gpu_conf) %> |
+<%= link_to 'Back', gpu_confs_path %>

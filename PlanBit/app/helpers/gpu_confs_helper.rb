@@ -1,0 +1,2 @@
+module GpuConfsHelper
+end

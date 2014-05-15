@@ -1,0 +1,31 @@
+<h1>Listing pool_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Algo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pool_types.each do |pool_type| %>
+      <tr>
+        <td><%= pool_type.id %></td>
+        <td><%= pool_type.name %></td>
+        <td><%= pool_type.algo %></td>
+        <td><%= link_to 'Show', pool_type %></td>
+        <td><%= link_to 'Edit', edit_pool_type_path(pool_type) %></td>
+        <td><%= link_to 'Destroy', pool_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pool type', new_pool_type_path %>

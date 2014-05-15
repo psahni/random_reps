@@ -1,0 +1,49 @@
+<h1>Listing pcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Os ver</th>
+      <th>Computer name</th>
+      <th>System type</th>
+      <th>Ram size</th>
+      <th>Ip address</th>
+      <th>Is laptop</th>
+      <th>Sub id0</th>
+      <th>Sub id1</th>
+      <th>Sub id2</th>
+      <th>Sub id3</th>
+      <th>Sub id4</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcs.each do |pc| %>
+      <tr>
+        <td><%= pc.mac %></td>
+        <td><%= pc.os_ver %></td>
+        <td><%= pc.computer_name %></td>
+        <td><%= pc.system_type %></td>
+        <td><%= pc.ram_size %></td>
+        <td><%= pc.ip_address %></td>
+        <td><%= pc.is_laptop %></td>
+        <td><%= pc.sub_id0 %></td>
+        <td><%= pc.sub_id1 %></td>
+        <td><%= pc.sub_id2 %></td>
+        <td><%= pc.sub_id3 %></td>
+        <td><%= pc.sub_id4 %></td>
+        <td><%= link_to 'Show', pc %></td>
+        <td><%= link_to 'Edit', edit_pc_path(pc) %></td>
+        <td><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pc', new_pc_path %>

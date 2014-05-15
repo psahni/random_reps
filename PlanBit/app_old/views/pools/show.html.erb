@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pool type:</strong>
+  <%= @pool.pool_type_id %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @pool.hostname %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @pool.port %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @pool.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @pool.password %>
+</p>
+
+<%= link_to 'Edit', edit_pool_path(@pool) %> |
+<%= link_to 'Back', pools_path %>

@@ -1,0 +1,53 @@
+<%= form_for(@gpu_miner) do |f| %>
+  <% if @gpu_miner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gpu_miner.errors.count, "error") %> prohibited this gpu_miner from being saved:</h2>
+
+      <ul>
+      <% @gpu_miner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pc_gpu_type_id %><br>
+    <%= f.text_field :pc_gpu_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pool_id %><br>
+    <%= f.text_field :pool_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_datetime %><br>
+    <%= f.text_field :start_datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :end_datetime %><br>
+    <%= f.text_field :end_datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :total_time %><br>
+    <%= f.text_field :total_time %>
+  </div>
+  <div class="field">
+    <%= f.label :shares %><br>
+    <%= f.text_field :shares %>
+  </div>
+  <div class="field">
+    <%= f.label :hashrate %><br>
+    <%= f.text_field :hashrate %>
+  </div>
+  <div class="field">
+    <%= f.label :log %><br>
+    <%= f.text_field :log %>
+  </div>
+  <div class="field">
+    <%= f.label :update_interval_mins %><br>
+    <%= f.text_field :update_interval_mins %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

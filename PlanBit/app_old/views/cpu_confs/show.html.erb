@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @cpu_conf.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cpu_conf.name %>
+</p>
+
+<p>
+  <strong>Max temp:</strong>
+  <%= @cpu_conf.max_temp %>
+</p>
+
+<p>
+  <strong>Max gpu:</strong>
+  <%= @cpu_conf.max_gpu %>
+</p>
+
+<p>
+  <strong>Run only inactive:</strong>
+  <%= @cpu_conf.run_only_inactive %>
+</p>
+
+<%= link_to 'Edit', edit_cpu_conf_path(@cpu_conf) %> |
+<%= link_to 'Back', cpu_confs_path %>

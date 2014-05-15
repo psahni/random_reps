@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gpu_type.name %>
+</p>
+
+<p>
+  <strong>Core amount:</strong>
+  <%= @gpu_type.core_amount %>
+</p>
+
+<p>
+  <strong>Gpu conf:</strong>
+  <%= @gpu_type.gpu_conf_id %>
+</p>
+
+<%= link_to 'Edit', edit_gpu_type_path(@gpu_type) %> |
+<%= link_to 'Back', gpu_types_path %>

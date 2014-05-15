@@ -1,0 +1,41 @@
+<h1>Listing gpu_miners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pc gpu type</th>
+      <th>Pool</th>
+      <th>Start datetime</th>
+      <th>End datetime</th>
+      <th>Total time</th>
+      <th>Shares</th>
+      <th>Log</th>
+      <th>Update interval mins</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gpu_miners.each do |gpu_miner| %>
+      <tr>
+        <td><%= gpu_miner.pc_gpu_type_id %></td>
+        <td><%= gpu_miner.pool_id %></td>
+        <td><%= gpu_miner.start_datetime %></td>
+        <td><%= gpu_miner.end_datetime %></td>
+        <td><%= gpu_miner.total_time %></td>
+        <td><%= gpu_miner.shares %></td>
+        <td><%= gpu_miner.log %></td>
+        <td><%= gpu_miner.update_interval_mins %></td>
+        <td><%= link_to 'Show', gpu_miner %></td>
+        <td><%= link_to 'Edit', edit_gpu_miner_path(gpu_miner) %></td>
+        <td><%= link_to 'Destroy', gpu_miner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gpu miner', new_gpu_miner_path %>

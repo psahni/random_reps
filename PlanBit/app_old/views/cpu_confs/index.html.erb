@@ -1,0 +1,35 @@
+<h1>Listing cpu_confs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Max temp</th>
+      <th>Max gpu</th>
+      <th>Run only inactive</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpu_confs.each do |cpu_conf| %>
+      <tr>
+        <td><%= cpu_conf.id %></td>
+        <td><%= cpu_conf.name %></td>
+        <td><%= cpu_conf.max_temp %></td>
+        <td><%= cpu_conf.max_gpu %></td>
+        <td><%= cpu_conf.run_only_inactive %></td>
+        <td><%= link_to 'Show', cpu_conf %></td>
+        <td><%= link_to 'Edit', edit_cpu_conf_path(cpu_conf) %></td>
+        <td><%= link_to 'Destroy', cpu_conf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpu conf', new_cpu_conf_path %>

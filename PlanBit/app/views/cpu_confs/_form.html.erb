@@ -1,0 +1,33 @@
+<%= form_for(@cpu_conf) do |f| %>
+  <% if @cpu_conf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpu_conf.errors.count, "error") %> prohibited this cpu_conf from being saved:</h2>
+
+      <ul>
+      <% @cpu_conf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :max_temp %><br>
+    <%= f.text_field :max_temp %>
+  </div>
+  <div class="field">
+    <%= f.label :max_gpu %><br>
+    <%= f.text_field :max_gpu %>
+  </div>
+  <div class="field">
+    <%= f.label :run_only_inactive %><br>
+    <%= f.text_field :run_only_inactive %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

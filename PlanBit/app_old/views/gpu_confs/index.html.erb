@@ -1,0 +1,35 @@
+<h1>Listing gpu_confs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Max temp</th>
+      <th>Max cpu</th>
+      <th>Run only inactive</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gpu_confs.each do |gpu_conf| %>
+      <tr>
+        <td><%= gpu_conf.id %></td>
+        <td><%= gpu_conf.name %></td>
+        <td><%= gpu_conf.max_temp %></td>
+        <td><%= gpu_conf.max_cpu %></td>
+        <td><%= gpu_conf.run_only_inactive %></td>
+        <td><%= link_to 'Show', gpu_conf %></td>
+        <td><%= link_to 'Edit', edit_gpu_conf_path(gpu_conf) %></td>
+        <td><%= link_to 'Destroy', gpu_conf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gpu conf', new_gpu_conf_path %>

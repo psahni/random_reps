@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pc gpu type:</strong>
+  <%= @gpu_miner.pc_gpu_type_id %>
+</p>
+
+<p>
+  <strong>Pool:</strong>
+  <%= @gpu_miner.pool_id %>
+</p>
+
+<p>
+  <strong>Start datetime:</strong>
+  <%= @gpu_miner.start_datetime %>
+</p>
+
+<p>
+  <strong>End datetime:</strong>
+  <%= @gpu_miner.end_datetime %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @gpu_miner.total_time %>
+</p>
+
+<p>
+  <strong>Shares:</strong>
+  <%= @gpu_miner.shares %>
+</p>
+
+<p>
+  <strong>Log:</strong>
+  <%= @gpu_miner.log %>
+</p>
+
+<p>
+  <strong>Update interval mins:</strong>
+  <%= @gpu_miner.update_interval_mins %>
+</p>
+
+<%= link_to 'Edit', edit_gpu_miner_path(@gpu_miner) %> |
+<%= link_to 'Back', gpu_miners_path %>

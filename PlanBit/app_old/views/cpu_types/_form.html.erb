@@ -1,0 +1,29 @@
+<%= form_for(@cpu_type) do |f| %>
+  <% if @cpu_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpu_type.errors.count, "error") %> prohibited this cpu_type from being saved:</h2>
+
+      <ul>
+      <% @cpu_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :processor %><br>
+    <%= f.text_field :processor %>
+  </div>
+  <div class="field">
+    <%= f.label :core_amount %><br>
+    <%= f.text_field :core_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :cpu_conf_id %><br>
+    <%= f.text_field :cpu_conf_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

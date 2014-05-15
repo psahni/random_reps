@@ -1,0 +1,263 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"total",
+				"total_time"
+			],
+			[
+				"al",
+				"algo"
+			],
+			[
+				"para",
+				"params"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"ide",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"id",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"l",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"to",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"op",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/PlanBit/db/schema.rb",
+		"/C/temp/req_res.json",
+		"/C/PlanBit/config/routes.rb",
+		"/C/PlanBit/public/index.html",
+		"/C/PlanBit/app/controllers/sessions_controller.rb",
+		"/C/PlanBit/app/views/sessions/home.html.erb",
+		"/C/PlanBit/app/controllers/api/pcs_controller.rb",
+		"/C/PlanBit/app/controllers/api/miners_controller.rb",
+		"/C/PlanBit/app/models/cpu_type.rb",
+		"/C/PlanBit/app/models/gpu_type.rb",
+		"/C/PlanBit/app/models/pool.rb",
+		"/C/PlanBit/app/models/gpu_miner.rb",
+		"/C/PlanBit/app/models/cpu_miner.rb",
+		"/C/PlanBit/app/controllers/pcs_controller.rb",
+		"/C/PlanBit/app/controllers/application_controller.rb",
+		"/C/PlanBit/app/views/cpu_miners/index.html.erb",
+		"/C/PlanBit/app/views/cpu_miners/show.html.erb",
+		"/C/PlanBit/app/views/gpu_miners/index.html.erb",
+		"/C/PlanBit/app/views/gpu_miners/show.html.erb",
+		"/C/PlanBit/app/views/gpu_types/index.html.erb",
+		"/C/PlanBit/app/views/gpu_types/show.html.erb",
+		"/C/PlanBit/app/views/gpu_types/_form.html.erb",
+		"/C/PlanBit/db/migrate/20140212100234_create_pools.rb",
+		"/C/PlanBit/app/controllers/help_controller.rb",
+		"/C/PlanBit/app/views/layouts/application.html.erb",
+		"/C/PlanBit/app/models/pc.rb",
+		"/C/PlanBit/app/controllers/api/req_res.json",
+		"/C/PlanBit/app/models/pc_cpu_type.rb",
+		"/C/PlanBit/app/models/pc_gpu_type.rb",
+		"/C/Users/elad/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"verify_authenticity_token",
+			"h2",
+			"h3",
+			"h2",
+			"<h2><a href=\"/pcs\">PCs</a></h3>\n  <h2><a href=\"/gpu_confs\">GPU Configurations</a></h3>\n  <h3><a href=\"/cpu_confs\">CPU Configurations</a></h3>\n  <h3><a href=\"/gpu_types\">GPU Types</a></h3>\n  <h3><a href=\"/cpu_types\">CPU Types</a></h3>\n  <h3><a href=\"/pools\">Pools</a></h3>\n  <h3><a href=\"/pool_types\">Pool Types</a></h3>\n  <h3><a href=\"/gpu_miners\">GPU Miners</a></h3>\n  <h3><a href=\"/cpu_miners\">CPU Miners</a></h3>",
+			"total_time",
+			"cpu",
+			": ",
+			":",
+			"\":",
+			"cpu_t",
+			"pool",
+			"name",
+			"value",
+			"format",
+			"params",
+			"format"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"gpu",
+			" => ",
+			"=> ",
+			"=>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.462462462462,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"home",
+				"app/views/sessions/home.html.erb"
+			],
+			[
+				"hom",
+				"app/views/sessions/home.html.erb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"pc",
+				"app/models/pc.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true
+}

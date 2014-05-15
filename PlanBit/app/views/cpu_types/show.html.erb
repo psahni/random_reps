@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Processor:</strong>
+  <%= @cpu_type.processor %>
+</p>
+
+<p>
+  <strong>Core amount:</strong>
+  <%= @cpu_type.core_amount %>
+</p>
+
+<p>
+  <strong>Cpu conf:</strong>
+  <%= @cpu_type.cpu_conf_id %>
+</p>
+
+<%= link_to 'Edit', edit_cpu_type_path(@cpu_type) %> |
+<%= link_to 'Back', cpu_types_path %>

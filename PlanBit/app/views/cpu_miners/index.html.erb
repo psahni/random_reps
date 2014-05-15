@@ -1,0 +1,43 @@
+<h1>Listing cpu_miners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pc cpu type</th>
+      <th>Pool</th>
+      <th>Start datetime</th>
+      <th>End datetime</th>
+      <th>Total time</th>
+      <th>Shares</th>
+      <th>Hashrate</th>
+      <th>Log</th>
+      <th>Update interval mins</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpu_miners.each do |cpu_miner| %>
+      <tr>
+        <td><%= cpu_miner.pc_cpu_type_id %></td>
+        <td><%= cpu_miner.pool_id %></td>
+        <td><%= cpu_miner.start_datetime %></td>
+        <td><%= cpu_miner.end_datetime %></td>
+        <td><%= cpu_miner.total_time %></td>
+        <td><%= cpu_miner.shares %></td>
+        <td><%= cpu_miner.hashrate %></td>
+        <td><%= cpu_miner.log %></td>
+        <td><%= cpu_miner.update_interval_mins %></td>
+        <td><%= link_to 'Show', cpu_miner %></td>
+        <td><%= link_to 'Edit', edit_cpu_miner_path(cpu_miner) %></td>
+        <td><%= link_to 'Destroy', cpu_miner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpu miner', new_cpu_miner_path %>

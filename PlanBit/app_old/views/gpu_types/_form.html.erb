@@ -1,0 +1,29 @@
+<%= form_for(@gpu_type) do |f| %>
+  <% if @gpu_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gpu_type.errors.count, "error") %> prohibited this gpu_type from being saved:</h2>
+
+      <ul>
+      <% @gpu_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :core_amount %><br>
+    <%= f.text_field :core_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :gpu_conf_id %><br>
+    <%= f.text_field :gpu_conf_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -9,7 +9,7 @@ class Api::AssetsManagerController < ApplicationController
   respond_to :json
 
   #
-  # Format: POST
+  # POST
   #
   # Request Example: curl -d "version=1.0" http://example.com/api/assets_manager/get_updated_build.json
   #                   OR

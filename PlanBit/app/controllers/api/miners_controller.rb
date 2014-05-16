@@ -45,10 +45,10 @@ class Api::MinersController < ApplicationController
     render json: @response
   end
 
-  #
+  # POST
   # Uninstall wise manager
   #
-  # curl -d 'pc_id=12' http://203.110.85.203/api/miners/uninstall
+  # Request Example: curl -d 'pc_id=12' http://example.com/api/miners/uninstall
   #
   def uninstall
      uninstall = UninstallWiseManager.new(:pc_id => params[:pc_id])

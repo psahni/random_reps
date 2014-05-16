@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
- 	USER_ID   = "admin"
+ 	  USER_ID   = "admin"
   	PASSWORD  = "planbit"
 	
 	skip_before_filter :authenticate

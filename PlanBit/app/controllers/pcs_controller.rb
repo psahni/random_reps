@@ -4,7 +4,7 @@ class PcsController < ApplicationController
   # GET /pcs
   # GET /pcs.json
   def index
-    @pcs = Pc.all
+    @pcs = Pc.page(params[:page]).per(Pc::PER_PAGE)
   end
 
   # GET /pcs/1

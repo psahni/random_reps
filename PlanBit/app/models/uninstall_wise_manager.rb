@@ -13,7 +13,7 @@ class UninstallWiseManager < ActiveRecord::Base
   protected
 
 	def pc_id_uniqueness
-		if UninstallWiseManager.where('pc_id = ?', self.pc_id)
+		unless UninstallWiseManager.where('pc_id = ?', self.pc_id).blank?
 			self.errors.add(:pc_id, "Uninstallation has already been done with this pc_id")
 		end
 	end

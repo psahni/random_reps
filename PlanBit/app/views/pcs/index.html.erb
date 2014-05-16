@@ -1,5 +1,10 @@
 <h1>Listing pcs</h1>
 
+<div style='color:green;'>
+	<%= page_entries_info @pcs %>
+</div>
+<%= paginate @pcs %>
+
 <table>
   <thead>
     <tr>
@@ -45,5 +50,7 @@
 </table>
 
 <br>
+<%= paginate @pcs %>
 
 <%= link_to 'New Pc', new_pc_path %>
+

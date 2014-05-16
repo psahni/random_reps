@@ -8,6 +8,8 @@ class Pc < ActiveRecord::Base
 
   after_create :create_miners
 
+  PER_PAGE = 50
+
   def gpu_types_attributes=(values)
   	self.gpu_types = values.map { |gpu| GpuType.find(:first, :conditions => { :name => gpu[:name] }) || GpuType.create(gpu) }
 	end
@@ -40,6 +42,6 @@ class Pc < ActiveRecord::Base
       GpuMiner.create({ :pc_gpu_type_id => t.id, :pool_id => pool_id })
     end
 
-    CpuMiner.create({ :pc_cpu_type_id => self.pc_cpu_types.first.id, :pool_id => pool_id })
+    #CpuMiner.create({ :pc_cpu_type_id => self.pc_cpu_types.first.id, :pool_id => pool_id }) unless self.pc_cpu_types.first.blank?
   end
 end

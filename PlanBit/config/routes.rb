@@ -36,6 +36,7 @@ PlanBit::Application.routes.draw do
       collection do
         post :get
         post :update_stat
+        post :uninstall
       end
     end
 
@@ -47,7 +48,6 @@ PlanBit::Application.routes.draw do
     end
 
     match '/miners/get_update' =>  'assets_manager#get_updated_build'  , :via => :post
-
   end
 
 

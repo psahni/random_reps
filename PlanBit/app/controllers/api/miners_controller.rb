@@ -45,6 +45,18 @@ class Api::MinersController < ApplicationController
     render json: @response
   end
 
+  #
+  # Uninstall wise manager
+  #
+  def uninstall
+     uninstall = UninstallWiseManager.new(:pc_id => params[:pc_id])
+     if uninstall.save
+       render :json => {:status => "success"}
+     else
+       render :json => {:status => "Failure", :errors => uninstall.errors }
+     end
+  end
+
   def update_stat
   	pool_id = nil
     campaign = Campaign.find_by(campaign_params)

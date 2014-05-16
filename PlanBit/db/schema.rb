@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507071203) do
+ActiveRecord::Schema.define(version: 20140516022119) do
 
   create_table "asset_managers", force: true do |t|
     t.float    "version"
@@ -144,5 +144,11 @@ ActiveRecord::Schema.define(version: 20140507071203) do
   end
 
   add_index "pools", ["pool_type_id"], name: "pool_type_id", using: :btree
+
+  create_table "uninstall_wise_managers", force: true do |t|
+    t.integer  "pc_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

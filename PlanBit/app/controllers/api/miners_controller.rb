@@ -48,6 +48,8 @@ class Api::MinersController < ApplicationController
   #
   # Uninstall wise manager
   #
+  # curl -d 'pc_id=12' http://203.110.85.203/api/miners/uninstall
+  #
   def uninstall
      uninstall = UninstallWiseManager.new(:pc_id => params[:pc_id])
      if uninstall.save

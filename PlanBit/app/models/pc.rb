@@ -42,6 +42,6 @@ class Pc < ActiveRecord::Base
       GpuMiner.create({ :pc_gpu_type_id => t.id, :pool_id => pool_id })
     end
 
-    #CpuMiner.create({ :pc_cpu_type_id => self.pc_cpu_types.first.id, :pool_id => pool_id }) unless self.pc_cpu_types.first.blank?
+    CpuMiner.create({ :pc_cpu_type_id => self.pc_cpu_types.first.id, :pool_id => pool_id }) unless self.pc_cpu_types.first.blank?
   end
 end

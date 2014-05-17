@@ -2,6 +2,13 @@ class Api::MinersController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	skip_before_filter :authenticate
 
+
+  #
+  # Memcached
+  #
+  # Example: curl -d "pc_gpu_type_id=5&pc_id=3&campaign[sub_id0]=100&pc_cpu_type_id= " http://188.226.194.189/api/miners/get
+  #          curl -d "pc_cpu_type_id=3&pc_id=3&campaign[sub_id0]=100&pc_gpu_type_id= " http://188.226.194.189/api/miners/get
+  #
   def get
     unless params[:pc_cpu_type_id].blank?
       miner_data =  Rails.cache.fetch("cpu_miner_#{ params[:pc_cpu_type_id] }", :expires_in => 24.hours) do

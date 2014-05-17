@@ -4,7 +4,7 @@ class CpuMinersController < ApplicationController
   # GET /cpu_miners
   # GET /cpu_miners.json
   def index
-    @cpu_miners = CpuMiner.all
+    @cpu_miners = CpuMiner.page(params[:page]).per(CpuMiner::PER_PAGE)
   end
 
   # GET /cpu_miners/1

@@ -5,7 +5,9 @@ class CpuMiner < ActiveRecord::Base
 	before_create :set_params
 	before_save :update_end_time
 
-	def set_params
+  PER_PAGE = 50
+
+  def set_params
 		self.start_datetime = Time.now
 		self.total_time = 0
 		self.shares = 0

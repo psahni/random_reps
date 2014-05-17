@@ -1,5 +1,10 @@
 <h1>Listing cpu_miners</h1>
 
+<div style='color:green;'>
+  <%= page_entries_info @cpu_miners %>
+</div>
+<%= paginate @cpu_miners %>
+
 <table>
   <thead>
     <tr>
@@ -39,5 +44,6 @@
 </table>
 
 <br>
+<%= paginate @cpu_miners %>
 
 <%= link_to 'New Cpu miner', new_cpu_miner_path %>

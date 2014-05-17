@@ -1,5 +1,8 @@
 <h1>Listing campaigns</h1>
-
+<div style='color:green;'>
+  <%= page_entries_info @campaigns %>
+</div>
+<%= paginate @campaigns %>
 <table>
   <thead>
     <tr>
@@ -33,6 +36,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @campaigns %>
 
 <br>
 

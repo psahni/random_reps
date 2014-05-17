@@ -4,7 +4,7 @@ class CpuTypesController < ApplicationController
   # GET /cpu_types
   # GET /cpu_types.json
   def index
-    @cpu_types = CpuType.all
+    @cpu_types = CpuType.page(params[:page]).per(CpuType::PER_PAGE)
   end
 
   # GET /cpu_types/1

@@ -6,7 +6,10 @@ class CpuType < ActiveRecord::Base
 
   before_save :set_conf_id
 
+  PER_PAGE = 50
+
 	def set_conf_id
 		self.cpu_conf_id = 1
-	end
+  end
+
 end

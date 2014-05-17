@@ -1,5 +1,10 @@
 <h1>Listing gpu_miners</h1>
 
+<div style='color:green;'>
+  <%= page_entries_info @gpu_miners %>
+</div>
+<%= paginate @gpu_miners  %>
+
 <table>
   <thead>
     <tr>
@@ -37,6 +42,9 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @gpu_miners  %>
+
 
 <br>
 

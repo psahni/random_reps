@@ -1,5 +1,10 @@
 <h1>Listing gpu_confs</h1>
 
+<div style='color:green;'>
+  <%= page_entries_info @gpu_confs %>
+</div>
+<%= paginate @gpu_confs %>
+
 <table>
   <thead>
     <tr>
@@ -29,6 +34,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @gpu_confs %>
 
 <br>
 

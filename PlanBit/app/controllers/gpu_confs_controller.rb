@@ -4,7 +4,7 @@ class GpuConfsController < ApplicationController
   # GET /gpu_confs
   # GET /gpu_confs.json
   def index
-    @gpu_confs = GpuConf.all
+    @gpu_confs = GpuConf.page(params[:page]).per(GpuConf::PER_PAGE)
   end
 
   # GET /gpu_confs/1

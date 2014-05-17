@@ -4,7 +4,7 @@ class GpuMinersController < ApplicationController
   # GET /gpu_miners
   # GET /gpu_miners.json
   def index
-    @gpu_miners = GpuMiner.all
+    @gpu_miners = GpuMiner.page(params[:page]).per(GpuMiner::PER_PAGE)
   end
 
   # GET /gpu_miners/1

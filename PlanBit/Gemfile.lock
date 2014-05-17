@@ -36,6 +36,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     daemon_controller (1.2.0)
+    dalli (2.6.4)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -64,6 +65,8 @@ GEM
       rake (>= 0.8.1)
     polyglot (0.3.3)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.2)
@@ -123,12 +126,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dalli
   execjs
   jbuilder (~> 1.2)
   jquery-rails
   kaminari
   mysql2
   passenger
+  rack-cache
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

@@ -41,15 +41,15 @@ ActiveRecord::Schema.define(version: 20140516022119) do
   end
 
   create_table "cpu_miners", force: true do |t|
-    t.integer  "pc_cpu_type_id",       null: false
-    t.integer  "pool_id",              null: false
-    t.datetime "start_datetime",       null: false
-    t.datetime "end_datetime",         null: false
-    t.integer  "total_time",           null: false
-    t.integer  "shares",               null: false
-    t.text     "log"
+    t.integer  "pc_cpu_type_id",                        null: false
+    t.integer  "pool_id",                               null: false
+    t.datetime "start_datetime",                        null: false
+    t.datetime "end_datetime",                          null: false
+    t.integer  "total_time",                            null: false
+    t.integer  "shares",                                null: false
+    t.text     "log",                  limit: 16777215
     t.integer  "update_interval_mins"
-    t.integer  "hashrate",             null: false
+    t.float    "hashrate",                              null: false
   end
 
   add_index "cpu_miners", ["pc_cpu_type_id", "pool_id"], name: "pc_cpu_type_id", unique: true, using: :btree
@@ -72,15 +72,15 @@ ActiveRecord::Schema.define(version: 20140516022119) do
   end
 
   create_table "gpu_miners", force: true do |t|
-    t.integer  "pc_gpu_type_id",       null: false
-    t.integer  "pool_id",              null: false
-    t.datetime "start_datetime",       null: false
-    t.datetime "end_datetime",         null: false
-    t.integer  "total_time",           null: false
-    t.integer  "shares",               null: false
-    t.text     "log"
+    t.integer  "pc_gpu_type_id",                        null: false
+    t.integer  "pool_id",                               null: false
+    t.datetime "start_datetime",                        null: false
+    t.datetime "end_datetime",                          null: false
+    t.integer  "total_time",                            null: false
+    t.integer  "shares",                                null: false
+    t.text     "log",                  limit: 16777215
     t.integer  "update_interval_mins"
-    t.integer  "hashrate",             null: false
+    t.float    "hashrate",                              null: false
   end
 
   add_index "gpu_miners", ["pc_gpu_type_id", "pool_id"], name: "pc_gpu_type_id", unique: true, using: :btree
@@ -112,18 +112,20 @@ ActiveRecord::Schema.define(version: 20140516022119) do
   add_index "pc_gpu_types", ["pc_id", "gpu_type_id"], name: "pc_id", unique: true, using: :btree
 
   create_table "pcs", force: true do |t|
-    t.string  "mac",           limit: 20, null: false
-    t.string  "os_ver",                   null: false
-    t.string  "computer_name",            null: false
-    t.string  "system_type",              null: false
-    t.integer "ram_size",                 null: false
-    t.string  "ip_address",    limit: 18, null: false
-    t.boolean "is_laptop"
-    t.integer "sub_id0"
-    t.integer "sub_id1"
-    t.integer "sub_id2"
-    t.integer "sub_id3"
-    t.integer "sub_id4"
+    t.string   "mac",           limit: 20, null: false
+    t.string   "os_ver",                   null: false
+    t.string   "computer_name",            null: false
+    t.string   "system_type",              null: false
+    t.integer  "ram_size",                 null: false
+    t.string   "ip_address",    limit: 18, null: false
+    t.boolean  "is_laptop"
+    t.integer  "sub_id0"
+    t.integer  "sub_id1"
+    t.integer  "sub_id2"
+    t.integer  "sub_id3"
+    t.integer  "sub_id4"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "pcs", ["mac"], name: "mac", unique: true, using: :btree

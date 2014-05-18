@@ -41,8 +41,8 @@ class CpuMiner < ActiveRecord::Base
                           :algo => pool_type.algo
                       },
                   },
-                  :update_interval_mins => miner.update_interval_mins,
-                  :send_log => miner.log
+                  :update_interval_mins => 120,
+                  :send_log => false
     }
     response
   end

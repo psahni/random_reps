@@ -2,6 +2,8 @@ class Api::MinersController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	skip_before_filter :authenticate
 
+  before_filter :skip_logging
+
 
   #
   # Memcached

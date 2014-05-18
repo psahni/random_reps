@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 	skip_before_filter :authenticate
 	#before_filter :save_login_state, :only => [:index, :login, :login_attempt]
 
+
 	def home
 		#Home Page
 	end

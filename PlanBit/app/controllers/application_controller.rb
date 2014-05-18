@@ -15,4 +15,12 @@ class ApplicationController < ActionController::Base
     end
   end 
 
+
+  #
+  #   Ref: -http://guides.rubyonrails.org/debugging_rails_applications.html#log-levels
+  #
+  #
+  def skip_logging
+    Rails.logger.level = Logger::Severity::UNKNOWN
+  end
 end

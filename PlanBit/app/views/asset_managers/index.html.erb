@@ -1,0 +1,41 @@
+<div id="template">
+    <% if flash[:success] %>
+      <div id="success">
+        <%=flash[:success]%>
+      </div>
+    <% end %>
+    <h3 class='lead'>Asset Managers</h3>
+    <div class='create_link row'>
+      <%=link_to "Create", new_asset_manager_path%>
+    </div>
+    <div class='row header'>
+      <div class="column">
+       Version
+      </div>
+      <div class="column">
+       File Link
+      </div>
+      <div class="column">
+        Created At
+      </div>
+    </div>
+    <div class='clear'>
+    </div>
+    <% @assets.each do |asset| %>
+      <div class='row content'>
+        <div class="column">
+          <%=asset.version%>
+        </div>
+        <div class="column">
+          <%=link_to "Click Here", (asset.avatar? ? asset.avatar.url : 'No file'), :target => :blank%>
+        </div>
+        <div class='column'>
+          <%=asset.created_at.utc%>
+        </div>
+        <div class="column">
+          <%=link_to "Edit", edit_asset_manager_path(asset)%>
+          <%=link_to "Destroy", asset_manager_path(asset), :method => :delete, :confirm => "Are you sure ?"%>
+        </div>
+      </div>
+    <% end %>
+</div>

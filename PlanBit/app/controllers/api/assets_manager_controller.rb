@@ -37,9 +37,9 @@ class Api::AssetsManagerController < ApplicationController
 
   def retrieve_download_link(asset)
     if Rails.env.development?
-      return request.protocol + request.host_with_port + asset.asset_path
+      return request.protocol + request.host_with_port + asset.avatar.url
     else
-      return request.protocol + request.host + asset.asset_path
+      return request.protocol + request.host + asset.avatar.url
     end
   end
 

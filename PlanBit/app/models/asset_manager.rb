@@ -1,7 +1,11 @@
 class AssetManager < ActiveRecord::Base
 
+  mount_uploader :avatar, AvatarUploader
 
-    def updated?(current_version)
+  validates :version, :avatar, :presence => true
+
+
+  def updated?(current_version)
       current_version = current_version.to_i
       if self.version > current_version
         return true

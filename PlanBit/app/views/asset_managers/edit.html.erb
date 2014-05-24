@@ -1,0 +1,16 @@
+<div id="template">
+    <h3 class='lead'>Edit Asset</h3>
+    <%=form_for @asset do |form|%>
+      <div class='form-section'>
+        <label for="">Version</label>
+        <%=form.text_field :version%>
+      </div>
+      <div class='form-section'>
+        <label for="">Upload File</label>
+        <%=form.file_field :avatar%>
+      </div>
+      <div class='form-section'>
+        <%=form.submit "Update"%>
+      </div>
+    <% end %>
+</div>

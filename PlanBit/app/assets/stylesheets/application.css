@@ -11,3 +11,54 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+
+
+.row .column{
+    width:  25%;
+    float: left;
+    padding: 10px 0px;
+    height: auto;
+}
+h3.lead{
+    margin-bottom: 20px;
+}
+
+.clear{
+    clear:both;
+}
+.row{
+    display: block;
+}
+
+.row.header{
+    display: block;
+    font-weight: bolder;
+}
+.row.content .column{
+    border-bottom: 1px lightgrey solid;
+}
+.form-section{
+    padding: 1em;
+}
+
+h5.create_link{
+    color:green;
+}
+
+label{
+    float:left;
+    width: 90px;
+}
+
+#error{
+    padding:15px;
+    background-color: hotpink;
+}
+
+#success{
+    padding: 15px;
+    background-color: lightgreen;
+}

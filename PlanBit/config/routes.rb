@@ -24,6 +24,8 @@ PlanBit::Application.routes.draw do
   resources :cpu_confs
   resources :gpu_confs
 
+  resources :asset_managers
+
   namespace :api do
 
     resources :pcs, :defaults => { :format => 'json' } do

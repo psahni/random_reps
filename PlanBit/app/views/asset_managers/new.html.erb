@@ -1,0 +1,21 @@
+<div id="template">
+  <% if flash[:error] %>
+   <div id="error">
+    <%=flash[:error]%>
+   </div>
+  <% end %>
+  <h3 class='lead'>Create Asset</h3>
+  <%=form_for @asset do |form|%>
+      <div class='form-section'>
+        <label for="">Version</label>
+        <%=form.text_field :version%>
+      </div>
+      <div class='form-section'>
+        <label for="">Upload File</label>
+        <%=form.file_field :avatar%>
+      </div>
+      <div class='form-section'>
+        <%=form.submit "Create"%>
+      </div>
+  <% end %>
+</div>

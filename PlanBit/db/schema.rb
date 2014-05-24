@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516022119) do
+ActiveRecord::Schema.define(version: 20140524064213) do
 
   create_table "asset_managers", force: true do |t|
     t.float    "version"
     t.string   "asset_path"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   create_table "campaigns", force: true do |t|
